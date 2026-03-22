@@ -10,6 +10,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { SettingsService } from '@core';
 import { MtxAlertModule } from '@ng-matero/extensions/alert';
 import { MtxProgressModule } from '@ng-matero/extensions/progress';
+import ApexCharts from 'apexcharts';
 import { Subscription } from 'rxjs';
 import { CHARTS, ELEMENT_DATA, MESSAGES, STATS } from './data';
 
@@ -113,12 +114,10 @@ export class Dashboard implements OnInit, AfterViewInit, OnDestroy {
   }
 
   initCharts() {
-    this.chart1 = new ApexCharts(document.querySelector('#chart1'), this.charts[0]);
+    this.chart1 = new ApexCharts(document.querySelector('#chart1')!, this.charts[0]);
     this.chart1?.render();
-    this.chart2 = new ApexCharts(document.querySelector('#chart2'), this.charts[1]);
+    this.chart2 = new ApexCharts(document.querySelector('#chart2')!, this.charts[1]);
     this.chart2?.render();
-
-    this.updateCharts();
   }
 
   updateCharts() {

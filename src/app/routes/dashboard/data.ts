@@ -168,14 +168,14 @@ export const CHARTS: ApexOptions[] = [
     },
     tooltip: {
       y: {
-        formatter: (val: number) => val.toString(),
+        formatter: val => val.toString(),
       },
     },
     yaxis: {
       tickAmount: 7,
       labels: {
-        formatter: (val: number, i: number) => {
-          if (i % 2 === 0) {
+        formatter: (val, opt) => {
+          if (opt!.seriesIndex % 2 === 0) {
             return val.toString();
           } else {
             return '';
