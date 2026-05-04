@@ -1,5 +1,6 @@
 import { inject, NgModule } from '@angular/core';
 
+import { OVERLAY_DEFAULT_CONFIG } from '@angular/cdk/overlay';
 import { MatDateFnsModule, provideDateFnsAdapter } from '@angular/material-date-fns-adapter';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatBadgeModule } from '@angular/material/badge';
@@ -84,6 +85,12 @@ import { PaginatorI18nService } from '@shared/services/paginator-i18n.service';
     MatTreeModule,
   ],
   providers: [
+    {
+      provide: OVERLAY_DEFAULT_CONFIG,
+      useValue: {
+        usePopover: false,
+      },
+    },
     {
       provide: MatPaginatorIntl,
       deps: [PaginatorI18nService],

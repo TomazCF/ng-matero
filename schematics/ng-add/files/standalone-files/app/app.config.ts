@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 import { provideRouter, withComponentInputBinding, withInMemoryScrolling } from '@angular/router';
 
+import { OVERLAY_DEFAULT_CONFIG } from '@angular/cdk/overlay';
 import { provideDateFnsAdapter } from '@angular/material-date-fns-adapter';
 import { MAT_CARD_CONFIG } from '@angular/material/card';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
@@ -67,6 +68,12 @@ export const appConfig: ApplicationConfig = {
       useFactory: formlyConfigFactory,
       deps: [TranslateService],
       multi: true,
+    },
+    {
+      provide: OVERLAY_DEFAULT_CONFIG,
+      useValue: {
+        usePopover: false,
+      },
     },
     {
       provide: MatPaginatorIntl,
