@@ -11,11 +11,10 @@ import { MtxSelectModule } from '@ng-matero/extensions/select';
   imports: [FormsModule, MatDialogModule, MatFormFieldModule, MtxSelectModule],
 })
 export class FormsSelectEdit {
-  defaultBindingsList = [
+  cities = [
     { value: 1, label: 'Vilnius' },
     { value: 2, label: 'Kaunas' },
     { value: 3, label: 'Pavilnys', disabled: true },
   ];
-
   selectedCity = null;
 }

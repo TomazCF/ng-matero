@@ -7,8 +7,6 @@
   </a>
   component of
   <a href="https://github.com/ng-matero/extensions" target="_blank">Material Extensions</a>
-  , it is a Material form field wrapper of
-  <code>ng-select</code>
   .
 </div>
 
@@ -32,7 +30,6 @@
             [items]="(people$ | async)!"
             bindLabel="name"
             bindValue="id"
-            autofocus
             [(ngModel)]="selectedPersonId"
           />
         </mat-form-field>
@@ -163,7 +160,7 @@
       </mat-card-header>
 
       <mat-card-content>
-        <p>Test ng-select in a dialog.</p>
+        <p>Test mtx-select in dialog.</p>
         <button matButton="filled" (click)="openDialog()">Open Dialog</button>
       </mat-card-content>
     </mat-card>
