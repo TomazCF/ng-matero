@@ -98,6 +98,7 @@ function updateVersions(cb) {
           'ngx-progressbar',
           'photoviewer',
           'screenfull',
+          '@eslint/js',
           'angular-eslint',
           'eslint',
           'parse5',

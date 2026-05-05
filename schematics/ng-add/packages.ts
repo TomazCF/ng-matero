@@ -33,6 +33,7 @@ export function add3rdPkgsToPackageJson(host: Tree) {
   addPackage(host, 'screenfull@0.0.0-PLACEHOLDER');
 
   // Dev
+  addPackage(host, '@eslint/js@0.0.0-PLACEHOLDER', 'dev');
   addPackage(host, 'angular-eslint@0.0.0-PLACEHOLDER', 'dev');
   addPackage(host, 'eslint@0.0.0-PLACEHOLDER', 'dev');
   addPackage(host, 'prettier@0.0.0-PLACEHOLDER', 'dev');
