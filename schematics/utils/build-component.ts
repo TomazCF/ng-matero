@@ -294,7 +294,8 @@ export function buildComponent(
   options: ComponentOptions,
   additionalFiles: Record<string, string> = {}
 ): Rule {
-  return async (host: Tree, context: FileSystemSchematicContext) => {
+  return async (host, ctx) => {
+    const context = ctx as FileSystemSchematicContext;
     const workspace = await getWorkspace(host);
     const project = getProjectFromWorkspace(workspace, options.project);
     const mainFilePath = getProjectMainFile(project);

@@ -97,11 +97,8 @@ export function addRouteDeclarationToModule(
     let routesVar: ts.Statement | undefined;
     if (routesArg.kind === ts.SyntaxKind.Identifier) {
       routesVar = source.statements
-        .filter((s: ts.Statement) => s.kind === ts.SyntaxKind.VariableStatement)
-        .find(
-          (v: ts.VariableStatement) =>
-            v.declarationList.declarations[0].name.getText() === routesVarName
-        );
+        .filter(ts.isVariableStatement)
+        .find(v => v.declarationList.declarations[0].name.getText() === routesVarName);
     }
 
     if (!routesVar) {

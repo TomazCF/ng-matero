@@ -91,14 +91,8 @@ function addESLintToAngularJson(options: Schema): Rule {
   return updateWorkspace(workspace => {
     const project = getProjectFromWorkspace(workspace, options.project);
 
-    let lintFilePatternsRoot = '';
-
     // Default Angular CLI project at the root of the workspace
-    if (project.root === '') {
-      lintFilePatternsRoot = 'src';
-    } else {
-      lintFilePatternsRoot = project.root;
-    }
+    const lintFilePatternsRoot = project.root === '' ? 'src' : project.root;
 
     const eslintTargetConfig = {
       builder: '@angular-eslint/builder:lint',
