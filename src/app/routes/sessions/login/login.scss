@@ -1,0 +1,32 @@
+.login-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #1f2937;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Cria uma barrinha decorativa embaixo do título */
+.login-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #0062cc; /* O mesmo azul do seu botão de login */
+  border-radius: 2px;
+  margin-top: 0.75rem;
+}
+
+:host {
+  .mat-card {
+    border-radius: 1.25rem;
+    overflow: hidden;
+  }
+}
