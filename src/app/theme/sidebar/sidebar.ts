@@ -3,10 +3,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
-import { Sidemenu } from '../sidemenu/sidemenu';
 import { Branding } from '../widgets/branding';
-import { UserPanel } from './user-panel';
 
 @Component({
   selector: 'app-sidebar',
@@ -18,9 +17,9 @@ import { UserPanel } from './user-panel';
     MatIconModule,
     MatButtonModule,
     MatToolbarModule,
+    RouterLink,
+    RouterLinkActive,
     Branding,
-    Sidemenu,
-    UserPanel,
   ],
 })
 export class Sidebar {

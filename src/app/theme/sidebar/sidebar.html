@@ -17,8 +17,9 @@
 }
 
 <div class="matero-sidebar-main">
-  @if (showUser()) {
-    <app-user-panel />
-  }
-  <app-sidemenu />
+  <nav class="matero-sidebar-nav">
+    <a routerLink="/inicio" routerLinkActive="active" class="matero-sidebar-link">Inicio</a>
+    <a routerLink="/agenda" routerLinkActive="active" class="matero-sidebar-link">Agenda</a>
+    <a routerLink="/pacientes" routerLinkActive="active" class="matero-sidebar-link">Pacientes</a>
+  </nav>
 </div>
